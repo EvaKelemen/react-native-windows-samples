@@ -20,11 +20,11 @@ App::App() noexcept
 #if BUNDLE
     JavaScriptBundleFile(L"index.windows");
     InstanceSettings().UseWebDebugger(false);
-    InstanceSettings().UseLiveReload(false);
+    InstanceSettings().UseFastRefresh(false);
 #else
     JavaScriptMainModuleName(L"index");
     InstanceSettings().UseWebDebugger(true);
-    InstanceSettings().UseLiveReload(true);
+    InstanceSettings().UseFastRefresh(true);
 #endif
 
 #if _DEBUG
@@ -34,6 +34,8 @@ App::App() noexcept
 #endif
 
     PackageProviders().Append(make<ReactPackageProvider>()); // Includes all modules in this project
+
+    REACT_REGISTER_NATIVE_MODULE_PACKAGES(); //code-gen macro from autolink
 
     InitializeComponent();
 

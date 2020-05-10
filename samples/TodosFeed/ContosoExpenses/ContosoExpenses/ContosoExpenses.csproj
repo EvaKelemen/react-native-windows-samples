@@ -8,6 +8,7 @@
     <ApplicationIcon>Images\contoso.ico</ApplicationIcon>
     <Platforms>x86;x64</Platforms>
     <AssetTargetFallback>uap10.0.18362</AssetTargetFallback>
+    <StartupObject>ContosoExpenses.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,9 +28,9 @@
 
   <ItemGroup>
     <PackageReference Include="AdaptiveCards" Version="1.1.2" />
-    <PackageReference Include="Microsoft.Toolkit.Wpf.UI.Controls" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Toolkit.Wpf.UI.Controls" Version="6.0.1" />
     <PackageReference Include="MvvmLightLibsStd10" Version="5.4.1.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Unity" Version="5.10.2" />
   </ItemGroup>
 
